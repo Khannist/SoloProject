@@ -19,5 +19,11 @@ public class TestTableServiceImpl implements TestTableService{
 		// TODO Auto-generated method stub
 		return testtableMapper.SelectAllList();
 	}
+	
+	@Override
+	public List<Map<String, Object>> SelectAllList2() throws Exception {
+		// TODO Auto-generated method stub
+		return testtableMapper.SelectAllList2();
+	}
 
 }

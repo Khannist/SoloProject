@@ -17,14 +17,25 @@ public class TestTableController {
 	@Resource
 	private TestTableService testtableService;
 	
+	/*
+	 * @RequestMapping(value="list") public ModelAndView AllListView(Map<String,
+	 * Object> map) throws Exception{ ModelAndView mav = new ModelAndView();
+	 * 
+	 * List<Map<String, Object>> AllList = testtableService.SelectAllList();
+	 * System.out.println(AllList);
+	 * 
+	 * 
+	 * mav.addObject("Alllist", AllList); mav.setViewName("list"); return mav; }
+	 */
+	
 	@RequestMapping(value="list")
-	public ModelAndView AllListView(Map<String, Object> map) throws Exception{
+	public ModelAndView AllListView2(Map<String, Object> map) throws Exception{
 		ModelAndView mav = new ModelAndView();
 		
-		List<Map<String, Object>> AllList = testtableService.SelectAllList();
+		List<Map<String, Object>> AllList = testtableService.SelectAllList2();
 		System.out.println(AllList);
 		
-		
+		System.out.println("2번");
 		mav.addObject("Alllist", AllList);
 		mav.setViewName("list");
 		return mav;
